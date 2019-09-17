@@ -8,10 +8,9 @@ CREATE TABLE burgers
 (
     id INT NOT NULL
     AUTO_INCREMENT,
-    burger_name VARCHAR NOT NULL
-    (250),
-    devoured BOOLEAN
-    (10),
+    burger_name VARCHAR
+    (250) NOT NULL,
+    devoured BOOLEAN,
     PRIMARY KEY
     (id)
 );
