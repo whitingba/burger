@@ -1,5 +1,5 @@
 //Import mysql connection
-var connection = require('../config/connection');
+var connection = require('../config/connection.js');
 
 //helper function to create an array of string of question marks
 function questionMark(num) {
@@ -38,28 +38,53 @@ var orm = {
             }
             bdb(result);
         });
-    };
+    },
+
+
     // * `insertOne()`
+    create: function (table, col, val, bdb) {
+        var queryString = 'INSERT INTO ' + table;
+
+        queryString += ' (';
+        queryString += col.toString();
+        queryString += ') ';
+        queryString += 'VALUES (';
+        queryString += questionMark(val.length);
+        queryString += ") ";
+
+        //console.log(queryString);
+
+        connection.query(queryString, val, function (err, results) {
+            if (err) {
+                throw err;
+            }
+
+            bdb(result);
+        });
+    },
+
     // * `updateOne()`
+    update: function (table, objColVal, condition, bdb) {
+        var queryString = 'UPDATE ' + table;
+
+        queryString += ' SET ';
+        queryString += objectToSql(objColVal);
+        queryString += ' WHERE ';
+        queryString += condition;
+
+        console.log(queryString);
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            bdb(result);
+        });
+    }
 
 
 
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 
 
