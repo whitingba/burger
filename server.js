@@ -6,6 +6,7 @@ var PORT = process.env.PORT || 8060;
 
 app.use(express.static('public'));
 
+
 //Parce application body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

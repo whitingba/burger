@@ -3,13 +3,13 @@
 var express = require('express');
 
 //create the router
-var router = express.Router;
+var router = express.Router();
 
 //Import burger.js
-var burger = require('../models/burger');
+var burger = require('../models/burger.js');
 
 //GET route - read the bugers in the database
-router.length('/', function (req, res) {
+router.get('/', function (req, res) {
     burger.all(function (data) {
         var hbsObject = {
             burgers: data
