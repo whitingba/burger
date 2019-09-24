@@ -4,7 +4,7 @@
 
 
 // function to add a new burger to the burger column
-$('.add-burger').on('click', function (event) {
+$('#subBurger').on('click', function (event) {
     event.preventDefault();
 
     var newYumBurger = {
