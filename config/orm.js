@@ -30,13 +30,13 @@ function objectToSql(ob) {
 var orm = {
 
     // * `selectAll()`
-    all: function (tableInput, bdb) {
+    all: function (tableInput, cb) {
         var queryString = 'SELECT * FROM ' + tableInput + ';';
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
-            bdb(result);
+            cb(result);
         });
     },
 

@@ -1,25 +1,29 @@
 {{!-- //TODO: finish putting together the HTML and add style to style sheet --}}
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-6">
+    <div class="row align-items-center">
+        <div class="col text1">EAT-</div>
+
+        <div class="col">
 
             <img src="/assets/img/burger.jpg" alt="image of a burger" id="bigBurger" />
 
         </div>
+        <div class="col-auto text2">DA-BURGER!</div>
     </div>
 
 
-    <div class="row justify-content-center">
-        <div class="col-6">
+    <div class="row align-items-center">
+        <div class="col toEat">
             <h2>Burgers to eat!</h2>
             {{#each burgers}}
-            {{#unless devoured}}
-            {{/unless}}
+            {{!-- {{#unless devoured}}
+            {{/unless}} --}}
             {{/each}}
         </div>
 
+        <div class="col placeholder"></div>
 
-        <div class="col-6">
+        <div class="col devoured">
             <h2>Devoured Burgers!</h2>
             <ul>
                 {{#each burgers}}
@@ -30,14 +34,15 @@
             </ul>
         </div>
     </div>
+    <div class="row"></div>
 
     <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-8 text-center addBurger">
             <h2>Add a Burger</h2>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-8 text-center">
             <form class="add-burger">
 
                 <div>

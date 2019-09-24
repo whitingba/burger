@@ -3,23 +3,23 @@ var orm = require('../config/orm.js');
 
 var burger = {
     //function to display all the burgers already in the database
-    all: function (bdb) {
+    all: function (cb) {
         orm.all("burgers", function (res) {
-            bdb(res);
+            cb(res);
         });
     },
 
     //create burger
-    create: function (col, val, bdb) {
+    create: function (col, val, cb) {
         orm.create("burgers", col, val, function (res) {
-            bdb(res);
+            cb(res);
         });
     },
 
     //update/devour
-    update: function (colval, condition, bdb) {
+    update: function (colval, condition, cb) {
         orm.update("burgers", colval, condition, function (res) {
-            bdb(res);
+            cb(res);
         });
     }
 
