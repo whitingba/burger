@@ -3,14 +3,16 @@
 
 
 <h2>Burgers to eat!</h2>
+<div class="container">
+    <div class="row">
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{/unless}}
-    {{/each}}
-</ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{/unless}}
+        {{/each}}
 
+    </div>
+</div>
 
 <h2>Burgers that have been devoured!</h2>
 <ul>
@@ -24,3 +26,11 @@
 
 <h2>Add a Burger</h2>
 {{!-- Add a box to add a burger name --}}
+<form class="add-burger">
+
+    <div>
+        <label for="newBurger">Add a New Burger</label>
+        <input type="text" id="newBurger" name="burgerName">
+    </div>
+    <button type="submit">Add Burger</button>
+</form>

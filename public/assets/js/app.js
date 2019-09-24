@@ -3,4 +3,22 @@
 
 
 
-//another function to add a new burger to the burger column
+// function to add a new burger to the burger column
+$('.add-burger').on('click', function (event) {
+    event.preventDefault();
+
+    var newYumBurger = {
+        name: $('#newBurger').val().trim()
+    };
+
+
+    $.ajax('/api/burgers', {
+        type: 'POST',
+        data: newYumBurger
+    }).then(
+        function () {
+            console.log('new burger created');
+            location.reload();
+        }
+    );
+});
