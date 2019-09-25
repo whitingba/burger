@@ -31,13 +31,15 @@
 
         <div class="col devoured">
             <h2>Devoured Burgers!</h2>
-            <ul>
+            <ol>
                 {{#each burgers}}
                 {{#if devoured}}
-                <p><span class="label"></span> {{this.burger_name}}</p>
+                <li>
+                    <p><span class="label"></span> {{this.burger_name}}</p>
+                </li>
                 {{/if}}
                 {{/each}}
-            </ul>
+            </ol>
         </div>
     </div>
     <div class="row"></div>
@@ -49,14 +51,13 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-8 text-center">
-            <form class="add-burger">
 
-                <div>
-                    <label for="newBurger"></label>
-                    <input type="text" id="newBurger" name="burgerName">
-                </div>
-                <button type="submit" id="subBurger">Add Burger</button>
+            <form id="newBurger" class="button-size">
+                {{!-- for textarea regarding user input set type to  text and set name attribute to string of movie --}}
+                <textarea type="text" name="burger_name"></textarea>
+                <button type="submit">Add Burger!</button>
             </form>
+
         </div>
     </div>
 </div>

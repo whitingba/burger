@@ -42,7 +42,7 @@ var orm = {
 
 
     // * `insertOne()`
-    create: function (table, col, val, bdb) {
+    create: function (table, col, val, cb) {
         var queryString = 'INSERT INTO ' + table;
 
         queryString += ' (';
@@ -54,17 +54,17 @@ var orm = {
 
         //console.log(queryString);
 
-        connection.query(queryString, val, function (err, results) {
+        connection.query(queryString, val, function (err, result) {
             if (err) {
                 throw err;
             }
 
-            bdb(result);
+            cb(result);
         });
     },
 
     // * `updateOne()`
-    update: function (table, objColVal, condition, bdb) {
+    update: function (table, objColVal, condition, cb) {
         var queryString = 'UPDATE ' + table;
 
         queryString += ' SET ';
@@ -78,7 +78,7 @@ var orm = {
                 throw err;
             }
 
-            bdb(result);
+            cb(result);
         });
     }
 

@@ -8,9 +8,9 @@
     
 }
 
-#subBurger {
+/* #subBurger {
     margin: 10px 10px 10px 5px;
-  }
+  } */
 
   /* button {
       position: relative;
@@ -45,9 +45,6 @@
     text-align: center;
 }
 
-.addBurger{
-    text-align: center;
-}
 
 .devour {
     padding: 5px;
