@@ -10,19 +10,17 @@ This assigment was to display an initial list of burgers from my burgers databas
 to the devoured column. There is also funtionality where the user can add their own burger to the list.
 
 ### Links
-COMING SOON
+COMING SOON - having issues with deploying to Heroku
 
 ### Screenshots 
 
 ##### Main Screen upon entering app
 
-COMING SOON
+![image of main page](https://github.com/whitingba/burger/blob/master/public/assets/img/title%20page.PNG)
+
+![giphy of working app](https://github.com/whitingba/burger/blob/master/public/assets/img/burger.gif)
 
 
-
-##### Once a few burgers have been devoured
-
-COMING SOON
 
 
 ### Technologies Used
@@ -30,6 +28,7 @@ COMING SOON
 * Node.js
 * Express
 * Handlebars.js
+* Bootstrap
 
 ### Author
 Barbara Whiting
