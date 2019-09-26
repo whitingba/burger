@@ -18,6 +18,9 @@ COMING SOON - having issues with deploying to Heroku
 
 ![image of main page](https://github.com/whitingba/burger/blob/master/public/assets/img/title%20page.PNG)
 
+
+##### Giphy of working app
+
 ![giphy of working app](https://github.com/whitingba/burger/blob/master/public/assets/img/burger.gif)
 
 
